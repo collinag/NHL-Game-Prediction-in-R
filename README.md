@@ -10,6 +10,7 @@ Next, missing variables were identified and addressed. The variable with the mos
 
 # Exploratory Analysis
 ![image](https://user-images.githubusercontent.com/50085554/236952222-d3b6f02d-7c58-4878-9655-cc0c1973141c.png)
+
 The above correlation plot shows the correlation between each variable. Since the variable, startRinkSide has no correlation with the won variable it has no prediction power and will be dropped from the model. Now I have determined which variables are most important for predicting which team will win. The data is now split into testing and training data and model building is started. 
 
 Starting with the XGBoost model, the training data is split into the data portion consisting of a matrix version of the predictor variables. Then a vector of the prediction variable is created, won. The XGBoost function is used on this data now, it is important to note that the computation time for building this model is considerably faster than most machine learning techniques. This model is then used to predict on the testing data, and a RMSE of 0.351 is found.
